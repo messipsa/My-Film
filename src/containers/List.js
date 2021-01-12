@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from '../Components/Card/Card';
 import axios from 'axios';
+import flm from '../films.json';
+
 
 
 class List extends Component {
@@ -17,8 +19,11 @@ class List extends Component {
    async componentDidMount()
     {
         try{
-        const movies = await fetch('../dataa.json');
+            //../assets/data.json
+            //../../data.json
+        const movies = await fetch('https://api.mocki.io/v1/ae79b624/jsk');
         const moviesJ = await movies.json();
+       
         
         if(moviesJ)
         {
@@ -32,9 +37,20 @@ class List extends Component {
     {
         console.log(e);
     }
+
+      //console.log(this.state.data);
         
     }
+    /*componentWillMount()
+	{
+		fetch('https://api.mocki.io/v1/ae79b624/jsk')
+        .then(res=>res.text())
+        .then(data=>console.log(data))
+		
+		
+	}*/
 
+    
    /* async componentDidMount()
     {
         axios.get('../assets/data.json')
@@ -49,6 +65,8 @@ class List extends Component {
     
     render() {
        const {data, loading} = this.state;
+       console.log(data);
+       console.log(loading);
        if(loading)
        {
            return <h1>Loading ...</h1>

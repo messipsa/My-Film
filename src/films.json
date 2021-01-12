@@ -1,0 +1,15 @@
+[
+    {
+        "id": 21,
+        "title": "salma",
+        "distributor": "20th Century Fox",
+        "year": 2009,
+        "amount": "$2,787,965,087",
+        "img": {
+          "src": "media/avatar.jpg",
+          "alt": "avatassr"
+        },
+        "ranking": 25
+      }
+      
+]
